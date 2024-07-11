@@ -1,0 +1,178 @@
+/*mon CSS*/
+
+.en-tête,h2{font-family: Georgia, serif;}
+.survole-en-tête:hover{
+    box-shadow: 5px 5px 10px lightseagreen;
+    font-family: Georgia, serif;
+}
+
+/*création d'un second block pour second menu*/
+.second-menu:hover{
+    display: block;
+    padding: 5px;
+    box-shadow: 1px 2px 4px lightseagreen;
+    background-color: rgb(255, 255, 255);
+    position: left;
+    width: 100%;
+    .second-cacher{display: contents;};
+}
+
+.troisième-menu:hover{
+    display: block;
+    padding: 5px;
+    box-shadow: inset 1px 2px 4px lightseagreen;
+    background-color: rgb(255, 255, 255);
+    position: left;
+    width: 100%;
+    .troisième-cacher{display: contents;};
+}
+
+.Parametre_Titre_Premier_Menu {
+    background-color: RGBa(200,200,200,0.5);
+    border-radius: 20px;
+    display: block;
+    width: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.Boite_De_La_Barre_De_Scroll {
+    display: flex;
+    gap: 10px; /*crée un espace entre les éléments*/
+    width: 98.5%;
+    overflow: auto;
+    background-color: RGBa(200,200,200,0.3);
+}
+
+/*design de la barre*/
+.Boite_De_La_Barre_De_Scroll::-webkit-scrollbar {
+    display: block;
+    width: 8px;
+    height: 10px;
+    background-color: #ff8383;
+    overflow: visible; 
+    border-radius: 10px;
+}
+
+/*barre à l'interieur de la scroll barre*/
+.Boite_De_La_Barre_De_Scroll::-webkit-scrollbar-thumb {
+    display: block;
+    width: 5px;
+    height: 5px;
+    background-color: #5425ff; 
+    border-radius: 10px;
+}
+
+
+
+/*CSS pour les menu déroulant--------------------------------------------------*/
+
+*{
+    margin-bottom: 5px;
+    padding: 0px;
+    font-family: cursive, sans-serif;
+}
+
+/*parametre du menu déroulant*/
+nav{
+    width: 100%;
+    margin: 0;
+    background-color: white;
+    position: sticky;
+    top: 0px;
+}
+
+/*Bloc de la liste*/
+nav ul{
+    list-style-type: none;
+    margin-left: 10px;
+}
+
+/*éléments de la liste du bloc*/
+nav ul li{
+    float: left;  /* endroit où démarre le premier bloc*/
+    min-width: 20%;
+    width: auto;
+    text-align: center;
+    position: relative;
+    overflow: visible;
+ 
+  
+}
+
+/*formation du bloc*/
+nav ul::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*éléments à leurs états iniciaux*/
+nav .Element_Avec_Un_Lien{
+    display: block;
+    text-decoration: none;
+    color: rgba(255, 0, 0, 0.6);
+    border-bottom: 2px solid transparent;
+    padding: 10px 0px;
+}
+
+/*quand les éléments sont survolé avec la souris*/
+nav .Element_Avec_Un_Lien:hover{
+    color: rgb(192, 0, 0);
+    border-bottom: 2px solid rgba(32, 178, 171, 0.3);
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/*parametre du bloc*/
+.Creation_De_Block{
+    display: none;
+    box-shadow: 0px 1px 2px lightseagreen;
+    background-color: rgb(255, 255, 255);
+    position: left;
+    width: 100%;
+    z-index: 100;
+    padding: 5px;
+    
+    
+}
+
+nav > ul li:hover .Creation_De_Block{
+    display: block;
+    
+}
+
+.Creation_De_Block li{
+    float: none;
+    width: 100%;
+    text-align: left;
+}
+
+.Creation_De_Block .Element_Avec_Un_Lien{
+    padding: 10px;
+    border-bottom: none;
+    border-top: none;
+    
+}
+
+.Creation_De_Block .Element_Avec_Un_Lien:hover{
+    border-top: none;
+    border-bottom: none;
+    background-color: RGBa(200,200,200,0.1); /*couleur et opacité du fond, du texte quand survolé par la souris */
+}
+
+.Icon_Apres_Le_Premier_Menu > .Element_Avec_Un_Lien::after{
+    content:" ▼";
+    font-size: 12px;
+}
+
+.Icon_Apres_Le_Deuxieme_Menu > .Element_Avec_Un_Lien::after{
+    content:" -";
+    font-size: 20px;
+    font-weight:bolder
+}
+
+.conteneur{
+  margin: 50px 20px;
+  height: 1000px;
+}
